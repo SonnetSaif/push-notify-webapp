@@ -6,11 +6,10 @@ A web application for receiving push notifications using **Firebase Cloud Messag
 
 ## Features
 
-- **Foreground Notifications**: Handle and display notifications when the app is open.
-- **Background Notifications**: Automatically display notifications when the app is in the background or closed.
-- **Firebase Integration**: Uses Firebase Cloud Messaging for push notifications.
-- **Service Worker**: Implements a service worker to handle background messages.
-- 
+- Foreground Notifications
+- Background Notifications
+- Firebase Integration
+- Service Worker Implementation
 ---
 
 ## Prerequisites
@@ -23,13 +22,18 @@ A web application for receiving push notifications using **Firebase Cloud Messag
 
 ## Setup
 
-1. **Add Firebase Configuration**:
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/Push-Notify-WebApp.git
+   cd Push-Notify-WebApp
+
+2. **Add Firebase Configuration**:
    - Replace the Firebase credentials in `main.js` and `firebase-messaging-sw.js` with your project’s configuration.
 
-2. **Add VAPID Key**:
+3. **Add VAPID Key**:
    - Replace `YOUR_VAPID_KEY` in `main.js` with your Firebase VAPID key.
 
-3. **Deploy the App**:
+4. **Deploy the App**:
    - Host the app on a web server (e.g., Firebase Hosting, Netlify, or static hosting).
 
 ---
@@ -56,12 +60,6 @@ A web application for receiving push notifications using **Firebase Cloud Messag
 ## Contributing
 
 Contributions welcome! Open an issue or submit a PR for improvements.
-
----
-
-## License
-
-MIT License. See [LICENSE](LICENSE).
 
 ---
 
