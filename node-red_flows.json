@@ -1,0 +1,621 @@
+[
+    {
+        "id": "3c9eaedeb4472868",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c94134c937474145",
+        "type": "inject",
+        "z": "3c9eaedeb4472868",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 340,
+        "y": 200,
+        "wires": [
+            [
+                "09f8db9ecb609e2d"
+            ]
+        ]
+    },
+    {
+        "id": "09f8db9ecb609e2d",
+        "type": "exec",
+        "z": "3c9eaedeb4472868",
+        "command": "npm install firebase-admin",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 650,
+        "y": 200,
+        "wires": [
+            [
+                "7478ef835c5d5231"
+            ],
+            [
+                "7478ef835c5d5231"
+            ],
+            [
+                "7478ef835c5d5231"
+            ]
+        ]
+    },
+    {
+        "id": "07062edc46d83c25",
+        "type": "exec",
+        "z": "3c9eaedeb4472868",
+        "command": "npm install node-fetch",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 640,
+        "y": 260,
+        "wires": [
+            [
+                "7478ef835c5d5231"
+            ],
+            [
+                "7478ef835c5d5231"
+            ],
+            [
+                "7478ef835c5d5231"
+            ]
+        ]
+    },
+    {
+        "id": "7ff08f087c63dd7c",
+        "type": "exec",
+        "z": "3c9eaedeb4472868",
+        "command": "npm install googleapis",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 640,
+        "y": 320,
+        "wires": [
+            [
+                "7478ef835c5d5231"
+            ],
+            [
+                "7478ef835c5d5231"
+            ],
+            [
+                "7478ef835c5d5231"
+            ]
+        ]
+    },
+    {
+        "id": "7478ef835c5d5231",
+        "type": "debug",
+        "z": "3c9eaedeb4472868",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "7325beb57b06aaa9",
+        "type": "inject",
+        "z": "3c9eaedeb4472868",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 340,
+        "y": 320,
+        "wires": [
+            [
+                "7ff08f087c63dd7c"
+            ]
+        ]
+    },
+    {
+        "id": "18d36cf2d63af9e3",
+        "type": "inject",
+        "z": "3c9eaedeb4472868",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 340,
+        "y": 260,
+        "wires": [
+            [
+                "07062edc46d83c25"
+            ]
+        ]
+    },
+    {
+        "id": "5ae70cd5a17644d9",
+        "type": "exec",
+        "z": "3c9eaedeb4472868",
+        "command": "rm -rf ./node_modules package-lock.json",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 660,
+        "y": 60,
+        "wires": [
+            [
+                "c5585add3a70cea3"
+            ],
+            [
+                "c5585add3a70cea3"
+            ],
+            [
+                "c5585add3a70cea3"
+            ]
+        ]
+    },
+    {
+        "id": "c5585add3a70cea3",
+        "type": "debug",
+        "z": "3c9eaedeb4472868",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "7c56b6805ddb4fd6",
+        "type": "inject",
+        "z": "3c9eaedeb4472868",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 340,
+        "y": 60,
+        "wires": [
+            [
+                "5ae70cd5a17644d9"
+            ]
+        ]
+    },
+    {
+        "id": "d5e0627f61d66a30",
+        "type": "http in",
+        "z": "3c9eaedeb4472868",
+        "name": "",
+        "url": "/subscribe",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 360,
+        "y": 760,
+        "wires": [
+            [
+                "392467083e743a95"
+            ]
+        ]
+    },
+    {
+        "id": "392467083e743a95",
+        "type": "json",
+        "z": "3c9eaedeb4472868",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 570,
+        "y": 760,
+        "wires": [
+            [
+                "a06f0e060139b287"
+            ]
+        ]
+    },
+    {
+        "id": "a06f0e060139b287",
+        "type": "function",
+        "z": "3c9eaedeb4472868",
+        "name": "subscribeToTopic",
+        "func": "// const admin = require('firebase-admin');\nconst { token, topic } = msg.payload; // Extract token and topic from the incoming payload\n\nreturn firebaseAdmin.messaging()\n    .subscribeToTopic(token, topic)\n    .then((response) => {\n        msg.payload = { success: true, message: `Subscribed to topic: ${topic}`, response };\n        return msg;\n    })\n    .catch((error) => {\n        msg.payload = { success: false, message: 'Failed to subscribe to topic', error };\n        return msg;\n    });\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "firebaseAdmin",
+                "module": "firebase-admin"
+            }
+        ],
+        "x": 790,
+        "y": 760,
+        "wires": [
+            [
+                "6d111e6a9b3315ca",
+                "807520037cc49cb5"
+            ]
+        ]
+    },
+    {
+        "id": "807520037cc49cb5",
+        "type": "http response",
+        "z": "3c9eaedeb4472868",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 990,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "6d111e6a9b3315ca",
+        "type": "debug",
+        "z": "3c9eaedeb4472868",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "00542819a96eb965",
+        "type": "http in",
+        "z": "3c9eaedeb4472868",
+        "name": "",
+        "url": "/unsubscribe",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 370,
+        "y": 920,
+        "wires": [
+            [
+                "360b0b981c170476"
+            ]
+        ]
+    },
+    {
+        "id": "360b0b981c170476",
+        "type": "json",
+        "z": "3c9eaedeb4472868",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 590,
+        "y": 920,
+        "wires": [
+            [
+                "7b932272b007565b"
+            ]
+        ]
+    },
+    {
+        "id": "7b932272b007565b",
+        "type": "function",
+        "z": "3c9eaedeb4472868",
+        "name": "unsubscribeFromTopic",
+        "func": "// const admin = require('firebase-admin');\nconst { token, topic } = msg.payload; // Extract token and topic from the incoming payload\n\nreturn firebaseAdmin.messaging()\n    .unsubscribeFromTopic(token, topic)\n    .then((response) => {\n        msg.payload = { success: true, message: `Unsubscribed from topic: ${topic}`, response };\n        return msg;\n    })\n    .catch((error) => {\n        msg.payload = { success: false, message: 'Failed to unsubscribe from topic', error };\n        return msg;\n    });",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "firebaseAdmin",
+                "module": "firebase-admin"
+            }
+        ],
+        "x": 800,
+        "y": 920,
+        "wires": [
+            [
+                "77c608cc2716b716",
+                "f730be20b1f7015b"
+            ]
+        ]
+    },
+    {
+        "id": "f730be20b1f7015b",
+        "type": "http response",
+        "z": "3c9eaedeb4472868",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 990,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "77c608cc2716b716",
+        "type": "debug",
+        "z": "3c9eaedeb4472868",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "20aa2b8d6ee9165a",
+        "type": "inject",
+        "z": "3c9eaedeb4472868",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 340,
+        "y": 420,
+        "wires": [
+            [
+                "a36fbde4ff8730d1"
+            ]
+        ]
+    },
+    {
+        "id": "a36fbde4ff8730d1",
+        "type": "function",
+        "z": "3c9eaedeb4472868",
+        "name": "initializeApp",
+        "func": "const admin = global.get('firebase-admin');\n\n// Check if Firebase app is already initialized\nif (!firebaseAdmin.apps.length) {\n    const serviceAccount = {\n        \"type\": \"service_account\",\n        \"project_id\": \"your-project-id\",\n        \"private_key_id\": \"your-private-key-id\",\n        \"private_key\": \"-----BEGIN PRIVATE KEY-----\\nYOUR-PRIVATE-KEY\\n-----END PRIVATE KEY-----\\n\",\n        \"client_email\": \"your-client-email@your-project-id.iam.gserviceaccount.com\",\n        \"client_id\": \"your-client-id\",\n        \"auth_uri\": \"https://accounts.google.com/o/oauth2/auth\",\n        \"token_uri\": \"https://oauth2.googleapis.com/token\",\n        \"auth_provider_x509_cert_url\": \"https://www.googleapis.com/oauth2/v1/certs\",\n        \"client_x509_cert_url\": \"https://www.googleapis.com/robot/v1/metadata/x509/your-client-email@your-project-id.iam.gserviceaccount.com\",\n        \"universe_domain\": \"googleapis.com\"\n    }\n\n    firebaseAdmin.initializeApp({\n        credential: firebaseAdmin.credential.cert(serviceAccount)\n    });\n}\n\nnode.status({ fill: \"green\", shape: \"dot\", text: \"Firebase Initialized\" });\nnode.warn(\"Firebase Initialized!\")\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "firebaseAdmin",
+                "module": "firebase-admin"
+            }
+        ],
+        "x": 630,
+        "y": 420,
+        "wires": [
+            [
+                "d76c3b372f355509"
+            ]
+        ]
+    },
+    {
+        "id": "d76c3b372f355509",
+        "type": "debug",
+        "z": "3c9eaedeb4472868",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "b5cf1ddfcea96c2c",
+        "type": "inject",
+        "z": "3c9eaedeb4472868",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 340,
+        "y": 540,
+        "wires": [
+            [
+                "e6557ad4549b95a1"
+            ]
+        ]
+    },
+    {
+        "id": "e6557ad4549b95a1",
+        "type": "function",
+        "z": "3c9eaedeb4472868",
+        "name": "sendNotification",
+        "func": "const topic = 'news'; \n\nconst message = {\n    data: {\n        title: \"New Title\",\n        body: \"New Body\"\n    },\n    topic: topic\n};\n\n try {\n    const response = await firebaseAdmin.messaging().send(message);\n    node.warn('Successfully sent message:');\n    msg.payload = { success: true, messageId: response };\n    return msg;\n} catch (error) {\n    node.error('Error sending message:', error);\n    msg.payload = { success: false, error: error.message };\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "firebaseAdmin",
+                "module": "firebase-admin"
+            }
+        ],
+        "x": 640,
+        "y": 540,
+        "wires": [
+            [
+                "735168c70993afd7",
+                "2a8bb90c3b7d8a89"
+            ]
+        ]
+    },
+    {
+        "id": "735168c70993afd7",
+        "type": "debug",
+        "z": "3c9eaedeb4472868",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "1e611e1d25ada9ef",
+        "type": "http in",
+        "z": "3c9eaedeb4472868",
+        "name": "",
+        "url": "/send-to-topic",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 330,
+        "y": 620,
+        "wires": [
+            [
+                "0a55e7a4281bb422"
+            ]
+        ]
+    },
+    {
+        "id": "0a55e7a4281bb422",
+        "type": "json",
+        "z": "3c9eaedeb4472868",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 530,
+        "y": 620,
+        "wires": [
+            [
+                "e6557ad4549b95a1"
+            ]
+        ]
+    },
+    {
+        "id": "2a8bb90c3b7d8a89",
+        "type": "http response",
+        "z": "3c9eaedeb4472868",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 870,
+        "y": 600,
+        "wires": []
+    }
+]
